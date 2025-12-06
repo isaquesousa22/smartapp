@@ -1,36 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
-    tools:context=".HomeFragment">
+    tools:context=".HomeActivity">
 
 
-    <include layout="@layout/toolbar" />
-
-
-    <TextView
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="O que é uma cidade inteligente"
-        android:textSize="30sp" />
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:title="Home" />
 
-    <TextView
+
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Uma cidade inteligente é uma área urbana que utiliza tecnologia digital para otimizar serviços e infraestruturas,\n
-    melhorando a qualidade de vida dos habitantes, a eficiência das operações e a sustentabilidade.\n
-    Isso é feito através da coleta e análise de dados em tempo real para melhorar aspectos como transporte, energia, segurança e gestão pública\n"
-        android:textSize="16sp" />
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Características principais\n
-    Tecnologia e dados: Integração de tecnologias da informação e comunicação (TICs) e a Internet das Coisas (IoT) para coletar e analisar dados que ajudam na tomada de decisões.\n
-    Mobilidade urbana: Implementação de sistemas de transporte eficientes, com foco em transporte público, mobilidade elétrica, ciclovias e infraestrutura para veículos elétricos.\n
-    Sustentabilidade: Uso de energias renováveis, melhor gestão de resíduos e otimização do consumo de recursos, visando reduzir emissões e proteger o meio ambiente.\n
-    Qualidade de vida: Melhora de serviços públicos como saúde, segurança e acesso à informação e conectividade, além de promover um desenvolvimento urbano mais equilibrado e humano.\n
-    Governança: Promoção de uma gestão pública mais responsável e transparente, utilizando dados para priorizar investimentos e tomar decisões estratégicas. "
-        android:textSize="16sp" />
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="300dp"
+                android:layout_height="150dp"
+                android:src="@drawable/city"
+                android:paddingLeft="100dp"
+                android:paddingTop="10dp"
+                android:layout_marginBottom="10dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="O que seria uma cidade inteligente?"
+                android:textSize="30sp"
+                android:paddingLeft="60dp"
+                android:paddingRight="20dp"
+                android:layout_marginBottom="10dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Uma cidade inteligente é uma área urbana que utiliza tecnologia digital para otimizar serviços e infraestruturas, melhorando a qualidade de vida dos habitantes, a eficiência das operações e a sustentabilidade. Isso é feito através da coleta e análise de dados em tempo real para melhorar aspectos como transporte, energia, segurança e gestão pública."
+                android:textSize="16sp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Características principais: Tecnologia e dados: Integração de tecnologias da informação e comunicação (TICs) e a Internet das Coisas (IoT) para coletar e analisar dados que ajudam na tomada de decisões. Mobilidade urbana: Implementação de sistemas de transporte eficientes, com foco em transporte público, mobilidade elétrica, ciclovias e infraestrutura para veículos elétricos. Sustentabilidade: Uso de energias renováveis, melhor gestão de resíduos e otimização do consumo de recursos, visando reduzir emissões e proteger o meio ambiente. Qualidade de vida: Melhora de serviços públicos como saúde, segurança e acesso à informação."
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"/>
+
+        </LinearLayout>
+    </ScrollView>
+
 </LinearLayout>

@@ -1,0 +1,14 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/homeFragment"
+        android:title="Home"/>
+    <item
+        android:id="@+id/cadastroFragment"
+        android:title="Cadastrar Item"/>
+    <item
+        android:id="@+id/listaFragment"
+        android:title="Lista de Itens"/>
+    <item
+        android:id="@+id/sobreFragment"
+        android:title="Sobre"/>
+</menu>
